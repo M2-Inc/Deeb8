@@ -52,5 +52,5 @@ module.exports = {
         secure: false,
       },
     },
-  }
+  },
 };
