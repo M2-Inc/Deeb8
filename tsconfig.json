@@ -3,9 +3,18 @@
     "outDir": "./dist/",
     "module": "commonjs",
     "target": "es5",
-    "jsx": "react",
+    "jsx": "preserve",
     "esModuleInterop": true,
-    "allowJs": true
+    "allowJs": true,
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true
   },
-  "exclude": ["node_modules", "client"]
+  "exclude": ["node_modules", "client"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/[group]"]
 }
