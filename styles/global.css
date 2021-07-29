@@ -211,6 +211,30 @@ nav {
   transition: all 0.5s;
 }
 
+.create-card-container {
+  width: 20%;
+  height: 40%;
+  background: rgb(97, 6, 150);
+  border: 1px solid rgb(253, 174, 174);
+  text-align: center;
+  display: flex;
+  color: rgb(255, 255, 255);
+  justify-content: center;
+  align-items: center;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  border-radius: 5px;
+}
+
+.create-card-container:hover {
+  background: rgb(220, 107, 243);
+  border: 1px solid rgb(253, 174, 174);
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
 .card-content {
   text-transform: capitalize;
 }
@@ -226,6 +250,7 @@ nav {
 }
 .thread-topic {
   margin-left: 2%;
+  text-transform: capitalize;
 }
 .thread-list {
   width: 100%;

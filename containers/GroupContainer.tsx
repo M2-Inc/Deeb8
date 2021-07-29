@@ -1,6 +1,8 @@
-import React, { FC, MouseEvent } from 'react';
+import React, { FC, MouseEvent, useState } from 'react';
 import Card from '../components/Card';
 import Router from 'next/router';
+import CreateCardWrapper from '../components/CreateCardWrapper';
+import CreateGroupContainer from '../containers/CreateGroupContainer';
 
 // export const getInitialProps = async ({ user }) => {
 //   console.log('user inside getInitialProps', user);
@@ -22,9 +24,12 @@ import Router from 'next/router';
 
 interface GroupContainerProps {
   groups: string[];
+  setGroups: React.Dispatch<React.SetStateAction<string[]>>;
 }
 
-const GroupContainer: FC<GroupContainerProps> = ({ groups }) => {
+const GroupContainer: FC<GroupContainerProps> = ({ groups, setGroups }) => {
+  const [isCreatingGroup, setIsCreatingGroup] = useState<boolean>(false);
+
   const handleClickGroup = (e: MouseEvent<HTMLDivElement>) => {
     const group = e.currentTarget.id.replace(' ', '-').toLowerCase();
     console.log('group clicked', group);
@@ -35,7 +40,21 @@ const GroupContainer: FC<GroupContainerProps> = ({ groups }) => {
     <Card key={group} name={group} handleClick={handleClickGroup} />
   ));
 
-  return <div className="group-container">{groupsList}</div>;
+  return (
+    <div className="group-container">
+      <CreateCardWrapper
+        context="group"
+        open={isCreatingGroup}
+        setOpen={setIsCreatingGroup}
+      >
+        <CreateGroupContainer
+          setOpen={setIsCreatingGroup}
+          setGroups={setGroups}
+        />
+      </CreateCardWrapper>
+      {groupsList}
+    </div>
+  );
 };
 
 export default GroupContainer;

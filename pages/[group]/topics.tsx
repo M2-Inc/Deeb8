@@ -21,9 +21,8 @@ const topicsPage: FC = () => {
     'GraphQL',
     'Node',
     'JavaScript',
-    'React Native',
-    'React',
   ]);
+  const [isCreatingTopic, setIsCreatingTopic] = useState(false);
 
   // useEffect(() => {
   //   if (!group) return;
@@ -48,7 +47,11 @@ const topicsPage: FC = () => {
       {user ? (
         <>
           <NavBar username={user} />
-          <TopicsContainer topics={topics} group={group} />
+          <TopicsContainer
+            topics={topics}
+            group={group}
+            setTopics={setTopics}
+          />
         </>
       ) : (
         <h1>Loading page</h1>

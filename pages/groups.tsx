@@ -2,6 +2,8 @@ import Router from 'next/router';
 import React, { FC, useEffect, useState } from 'react';
 import NavBar from '../components/NavBar';
 import GroupContainer from '../containers/GroupContainer';
+import CreateGroupContainer from '../containers/CreateGroupContainer';
+import CreateCardWrapper from '../components/CreateCardWrapper';
 
 const Group: FC = () => {
   // const [user, setUser] = useState<string>('');
@@ -11,6 +13,7 @@ const Group: FC = () => {
     'codesmith',
     'genshin buddies',
     'the bois',
+    'the gorls',
     'aram team',
   ]);
 
@@ -40,7 +43,7 @@ const Group: FC = () => {
       {user && (
         <>
           <NavBar username={user} />
-          <GroupContainer groups={groups} />
+          <GroupContainer groups={groups} setGroups={setGroups} />
         </>
       )}
     </>
