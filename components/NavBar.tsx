@@ -10,10 +10,23 @@ const NavBar: FC<NavBarProps> = ({ username }) => {
     <div className="nav-container">
       <nav>
         <div className="nav-left">
-          <Link href="/groups">Groups</Link>
-          <Link href="/friends">Friends</Link>
+          <Link href="/groups">
+            <a className="nav-link">Groups</a>
+          </Link>
+          <Link href="/friends">
+            <a className="nav-link">Friends</a>
+          </Link>
         </div>
-        <div className="nav-right">{username}</div>
+        <div className="nav-right">
+          {/* <div className="nav-img"> */}
+          <img
+            src={'https://i.imgur.com/1fdbZSj.png'}
+            alt="usericon"
+            className="user-icon"
+          />
+          {/* </div> */}
+          <div className="nav-username">{username}</div>
+        </div>
       </nav>
     </div>
   );

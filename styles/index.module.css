@@ -1,0 +1,84 @@
+.login {
+  margin: 0;
+  padding: 0;
+  background: rgb(252, 164, 164);
+  color: rgb(0, 0, 0);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  height: 80vh;
+  width: 95vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* box-sizing: border-box; */
+}
+NavBar {
+  background: rgb(252, 164, 164);
+  color: rgb(0, 0, 0);
+  text-align: center;
+  height: 80vh;
+  width: 95vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* box-sizing: border-box; */
+}
+
+.loginContainer {
+  margin: 0 auto;
+  padding: 0;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  width: 30vw;
+}
+.inputHeader {
+  margin: 6%;
+}
+.login-panel {
+}
+.loginSubmit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.loginButton {
+  margin: 10px;
+  margin-top: 20px;
+  width: 40%;
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.loginButton:hover {
+  background-color: #78e27c; /* Green */
+  color: white;
+}
+
+.signupButton {
+  margin: 10px;
+  margin-top: 20px;
+  width: 40%;
+  background-color: #4dd158; /* Green */
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.signupButton:hover {
+  background-color: #4caf50; /* Green */
+  color: white;
+}
