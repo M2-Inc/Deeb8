@@ -24,13 +24,9 @@ interface GroupContainerProps {
   groups: string[];
 }
 
-interface Event {
-  target: HTMLDivElement;
-}
-
 const GroupContainer: FC<GroupContainerProps> = ({ groups }) => {
   const handleClickGroup = (e: MouseEvent<HTMLDivElement>) => {
-    const group = e.currentTarget.id;
+    const group = e.currentTarget.id.replace(' ', '-').toLowerCase();
     console.log('group clicked', group);
     Router.push(`/${group}/topics`);
   };
